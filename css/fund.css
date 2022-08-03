@@ -1,0 +1,47 @@
+/* Ching Chun Hung */
+
+hr {
+	border-top: 1px dashed black;		/* hr style */
+	opacity: 0.3;
+}
+
+#flex {
+	display: flex;					/* flex box */
+	flex-flow: row wrap;
+}
+
+#fundleft, #fundright {
+	height: auto;
+	width: 100%;
+	padding: 20px;
+}
+
+#fundleft img {
+	border-radius: 50px;
+	padding: 10px;
+	width: 250px;
+	float: left;	/* show left image */
+	transition: .1s; /* Animation */
+	cursor: crosshair;
+}
+#fundright img {
+	border-radius: 50px;
+	padding: 10px;
+	width: 250px;
+	float: right;		/* show right image */
+	transition: .1s; /* Animation */
+	cursor: crosshair;
+}
+
+#fundleft img:hover, #fundright img:hover {		/* zoom effect */
+	transform: scale(1.2); 	
+}
+
+@media only screen and (max-width: 800px) {	/* not show pictures */
+	#fundleft img{
+		display: none;
+	}
+	#fundright img{
+		display: none;
+	}
+}

@@ -1,0 +1,35 @@
+/* Ching Chun Hung */
+
+#submit {    /* submit button style */
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition-duration: 0.4s;   /* hover animation */
+	font-size: 16px;
+}
+
+#submit:hover {
+	background-color: #39853c;
+	box-shadow: 3px 3px green;
+}
+
+#reset {
+	background-color: #998228;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.4s;
+}
+
+#reset:hover {
+	background-color: #7d6a20;
+	box-shadow: 3px 3px orange;
+}

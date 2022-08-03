@@ -1,0 +1,21 @@
+/* Ching Chun Hung */
+
+#footer {
+	min-height: 80px;			/* set footer size */
+	background-color: #373737;
+}
+
+#footer p {  /* footer text style */
+	color: #d9d9d9;
+	font-size: 15px;
+	font-style: italic;
+	text-indent: 30px;
+}
+
+#footer a {
+	color: #8082ff;
+}
+
+#footer a:hover {
+	color: #6265fc;
+}

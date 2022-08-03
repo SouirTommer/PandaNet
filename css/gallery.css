@@ -1,0 +1,112 @@
+/* Ching Chun Hung */
+
+.gallery {	/* body style */
+	min-height: 700px;
+	background-color: white;
+	border-radius: 25px;
+	position: static;
+	margin: 0 200 25 200px;
+	padding: 0px;
+	border-left: 1px solid #e7e7e7;
+}
+
+#flex {
+	display: flex;					/* flex box */
+	flex-flow: row wrap;
+}
+
+.row {					/* row 1 show photo style */
+	order: 1;
+	height: auto;
+	width: 31%;
+	padding: 6px;
+	margin: 6px;
+	display: inline;
+}
+
+.row img {
+	border-radius: 5px;
+	margin: 10px;
+	max-width: 100%;	/* 100% fit the flex box */
+    max-height: 100%;
+	cursor: crosshair;			/* view photo mouse cursor */
+	transition: .1s ease-in-out; /* zoom in fade time */
+}
+
+.row img:hover {
+	transform: scale(1.1); 	/* zoom effect */
+}
+
+.row2 {				/* row 2 style, more height */
+	height: auto;
+	margin: 10px;
+	padding: 10px;
+	width: 47%;
+	display: inline;
+	order: 2;
+}
+
+.row2 img {
+	border-radius: 5px;
+	margin: 10 0px;
+	max-width: 100%;
+    max-height: 100%;
+	cursor: crosshair;
+	transition: .1s ease-in-out;
+}
+
+.row2 img:hover {
+	transform: scale(1.1);
+}
+
+.row3 {           /* last row style, biggest */
+	height: auto;
+	margin: 5 20 5 10px;
+	padding: 10px;
+	width: 100%;
+	display: inline;
+	order: 3;
+	height: auto;
+}
+
+.row3 img {
+	border-radius: 5px;
+	margin: 10 0px;
+	max-width: 100%;
+    max-height: 100%;
+	cursor: crosshair;
+	transition: .1s ease-in-out;
+}
+
+.row3 img:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1500px) { 
+	.gallery {
+		min-height: 700px;
+		position: static;
+		margin: 0px;
+	}
+	.row {				/* set width 100% let the page 1 row 1 photo, more user-friendly */
+	margin: 5 20 5 10px;
+	padding: 10px;
+	width: 100%;
+}
+	.row2 {
+	width: 100%;
+}
+	.row3 {
+	width: 100%;
+}
+.row img:hover {		/* cannot zoom in since the page so small */
+	transform: scale(1);
+}
+.row2 img:hover {
+	transform: scale(1);
+}
+.row3 img:hover {
+	transform: scale(1);
+}
+	
+}

@@ -1,0 +1,99 @@
+/* Ching Chun Hung */
+
+p {
+	font-size: 15px;
+}
+
+#hrs1 {					/* the <hr> style */
+	border-top: 1px dashed black;
+	margin-left: auto;
+	margin-right: 50%;
+	opacity: 0.5;
+}
+
+#flex {/* flex box, overall the page */
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#top { 
+	order: 1;
+	height: auto;
+	width: 100%;
+}
+
+#top img { /* top photo */
+	padding: 20 0px;
+	max-width: 100%;
+    max-height: 100%;
+	opacity: 0.9;
+}
+
+#panda_info {
+	order: 2;
+	height: auto;
+	width: 100%;
+}
+
+#panda_info img {
+	padding: 40px;
+	width: 450px;
+	float: right;   /* make to right */
+	transition: .2s;   /* Animation */
+	cursor: crosshair;
+}
+
+#panda_info img:hover {
+	transform: scale(1.2);
+}
+
+#Contents { 
+	border: 1px solid #A2A9B1; 
+	border-radius: 3px; 
+	background: #F8F9FA;
+	order: 4;
+	margin: 40px; 
+	width: auto;
+	float: right;
+	height: 150px;
+	padding: 15px; 
+}
+
+#intmain {
+	order: 3;
+	height: 30%;
+	width: 10px;
+	-webkit-column-count: 3;  /* cut to 2 column, better display space */
+	letter-spacing: 1px;
+	flex-grow: 2;
+	padding: 15px; 
+}
+
+#intmain h1, h2 {
+	line-height: 0.4;
+	-webkit-column-span: all;
+}
+
+@media only screen and (max-width: 1400px) {
+	#Contents {   /* close the content when screen is small */
+		display: none;
+	}
+	#panda_info img {
+		width: 300px;
+	}
+	#intmain {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#Contents {
+		display: none;
+	}
+	#panda_info img {
+		display: none;
+	}
+	#intmain {
+		height: auto;
+	}
+}

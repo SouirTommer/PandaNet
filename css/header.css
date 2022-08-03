@@ -1,0 +1,113 @@
+/* Ching Chun Hung */
+
+.navtitle {   /* the "PandaNET" title and icon */
+	width: 100%;
+	height: 14%;
+	background: white;
+	display: inline-block;
+	text-align: center;
+}
+
+.navmenu {    /* the blue menu bar */
+	width: 100%;
+	height: auto;
+	background: #27323A;
+	display: inline-block;
+}
+
+.menu ul {   /* ul style */
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 200px;
+	display: inline-block;
+	background-color: #415361;
+}
+
+.menu #login {  /* make the login and sponsor buttom to right */
+	width: 90px;
+	float: right;
+	background-color: #E63946;
+}
+
+.menu #sponsor {
+	width: 110px;
+	float: right;
+	background-color: #445969;
+}
+
+.menu a {		/* disable the text decoration and make button better face*/
+	text-decoration: none;
+	padding: 10px 30px;
+	line-height: 1.2em;
+	color: black;
+	display: block;
+	color: white;
+}
+
+.menu a:hover {   /* button hover background */
+	background: #4f6778;
+}
+
+.menu .sub {    /* drop down manu sub button */
+	position: absolute;
+	top: auto;
+	background-color: #7896ad;
+	box-shadow: 2px 2px 1px black;
+}
+
+.menu .sub a:hover {
+	background: #84a4bd;
+}
+
+.menu .sub li {
+	height: 0px;
+	overflow: hidden;
+	transition: height 300ms;
+}
+
+.menu ul li:hover .sub li {
+	height: 40px;
+}
+
+@media only screen and (max-width: 960px) { /* prevent some design event when screen is small */
+	.navtitle {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.menu ul { /* new menu bar design when screen small */
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		display: inline-block;
+		background-color: #415361;
+		text-align: center;
+	}
+	.menu #login {			/* modify to login and sponsor 50%(overall screen) */
+		width: 50%;				/* more user-friendly */
+		background-color: #445969;
+	}
+	.menu #sponsor {
+		width: 50%;
+		background-color: #445969;
+	}
+	.menu .sub {		
+		position: static;  /* another drop down style */
+		top: 38px;
+		background-color: #7896ad;
+	}
+	.menu .sub a:hover {
+		background: #84a4bd;
+	}
+	.menu .sub li {
+		height: 0px;
+		overflow: hidden;
+		transition: height 300ms;
+	}
+	.menu ul li:hover .sub li {
+		height: 40px;
+	}
+}

@@ -1,0 +1,96 @@
+/* Ching Chun Hung */
+
+hr {
+	border-top: 1px dashed black;
+	margin-left: auto;
+	margin-right: 50%;
+	opacity: 0.5;
+}
+
+p {
+	font-size: 15px;
+}
+
+video {  /* auto size video  */
+	position: static;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: auto;
+	padding: 0 0 30 0px;
+}
+
+#video {  /* center video  */
+	text-align: center;
+	height: auto;
+	width: 100%;
+	overflow: auto;
+}
+
+#flex {  /* box flex  */
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#inttop {  /* introduce top  */
+	height: auto;
+	width: 100%;
+}
+
+#inttop img {
+	padding: 40px;
+	width: 450px;
+	float: right;
+	transition: .2s; /* Animation */
+	cursor: crosshair;
+}
+
+#intleft img {   /* outset style border */
+	width: 90%;
+	border: 2px outset #ddd;
+	border-radius: 15px;
+	cursor: crosshair;
+}
+
+#inttop img:hover {
+	transform: scale(1.2);
+}
+
+#intleft {
+	width: auto;
+}
+
+#intmain {
+	border-radius: 15px;
+	height: 30%;
+	width: 10px;
+	-webkit-column-count: 2;
+	letter-spacing: 1px;
+	flex-grow: 2;
+}
+
+#intmain h1 {
+	line-height: 0.3;
+	-webkit-column-span: all;
+}
+
+@media only screen and (max-width: 1500px) {
+	#intleft {       /* disable left photo */
+		display: none;
+	}
+	#inttop img {
+		width: 300px;
+	}
+	#intmain {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#intleft {
+		display: none;
+	}
+	#intmain {
+		height: auto;
+	}
+}

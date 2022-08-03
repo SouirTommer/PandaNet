@@ -1,0 +1,143 @@
+/* Ching Chun Hung */
+
+body {
+	position: static;  
+	height: 100%;
+	margin: 0;
+	font-family: sans-serif;
+	background-image: url(../Image/bg.png);
+	overflow: auto
+}
+
+.mainpage {
+	min-height: 700px; /* page size */
+	background-color: white;
+	border-radius: 25px;
+	position: static;
+	margin: 0 200 25 200px;
+	padding: 0 30px;
+	border-left: 1px solid #e7e7e7;
+}
+
+h1 {
+	text-shadow: 0.5px 0.5px #000000;
+	text-align: center;
+}
+
+button {    /* button default face */
+	background-color: #325380;
+	border-radius: 15px;
+	border: 0px;
+	padding: 12px;
+	color: white;
+	font-size: 14px;
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #426ba1;
+}
+
+
+.row {
+	margin: 15px;
+	padding: 15px;
+}
+.columns {   /* flex box  */
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.column { 
+	text-align: center;
+	flex: 1;
+	padding: 3px;
+}
+
+.center {
+	text-align: center;
+	font-size: 16px;
+}
+
+#colinfo {   /* flex box font */
+	font-family: "Verdana", sans-serif;
+	margin: 10px;
+	font-size: 10px;
+}
+
+#welcome {
+	padding: 30px;
+	text-align: center;
+	font-size: 48px;
+}
+
+#panda1 {   /* right photo container */
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	padding: 5px;
+	width: 400px;
+	margin: 25 0 0 0px;
+	transition: .2s; /* Animation */
+	float: right;
+	cursor: crosshair;
+}
+#panda1:hover {
+  transform: scale(1.2);
+}
+
+#colimg {
+	border-radius: 10px 10px 0px 10px;
+	cursor: crosshair;
+	width: 90%;
+	transition: .1s ; /* Animation */
+}
+#colimg:hover {
+  transform: scale(1.2);
+}
+
+.back {   /* back buttom in left */
+	padding: 0 1rem;
+	position: absolute;
+	top: 40%;
+	opacity: 0.7;
+	left: auto;
+	background: #e3e3e3;
+}
+
+.back a {
+	text-decoration: none;
+}
+
+.back a:hover {
+	color: hotpink;
+}
+
+@media only screen and (max-width: 960px) {
+	.mainpage {   /* zoom the mainpage size */
+		min-height: 700px;
+		position: static;
+		margin: 0px;
+	}
+
+	#panda1 { /* make the right photo to top */
+	display: inline-block;
+	vertical-align: top;
+	float: none;
+	margin: 25 0 0 0px;
+}
+	.back {
+		padding: 0 1rem;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: #e3e3e3;
+	}
+	.back a {
+		text-decoration: none;
+	}
+	.back a:hover {
+		color: hotpink;
+	}
+}
+

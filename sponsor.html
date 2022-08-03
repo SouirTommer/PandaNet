@@ -1,0 +1,137 @@
+<link href="css/main.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/sponsor.css" rel="stylesheet">
+<script type="text/javascript" src="js/input.js"></script>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>PandaNET</title>
+      <link rel="icon" type="image/x-icon" href="image/title.png">
+      <nav class="navtitle">
+         <a href="index.html"><img src="image/test.png"></a>
+      </nav>
+      <nav class="navmenu">
+         <div class="menu">
+            <ul>
+               <li>
+                  <a href="#">≡ &nbsp;Menu</a><!--header menu-->
+                  <ul class="sub">
+                     <li><a href="introduce.html">Introduce</a></li>
+                     <li><a href="History.html" >History</a></li>
+                     <li><a href="PandaFund.html" >PandaFund</a></li>
+                     <li><a href="Gallery.html" >Gallery</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <ul id="login">
+               <li><a href="login.html">Login</a></li>
+            </ul>
+            <ul id="sponsor">
+               <li><a href="sponsor.html">Sponsor</a></li>
+            </ul>
+         </div>
+      </nav>
+      <h1>SPONSOR US</h1>
+   </head>
+   <body onload="startform()"><!--to update the random user id/ pwd-->
+      <div class="back">
+         <h1><a href="index.html"><</a></h1>
+      </div>
+      <div class="mainpage">
+         <br>
+         Your donation makes you a member of PandaNET and a partner.
+         <h2>Donate</h2>
+         <form enctype="multipart/form-data" method="post" onSubmit="print_result()"> <!--submit will call the js function-->
+            <fieldset>
+               <legend>Donor Information</legend>
+               <br/>
+			   
+               First Name : <!--Limit the firstname capital first character and cannot null-->
+               <input type="text" id="fn" name="Firstname" pattern="^[A-Z][a-z]*?" title="Capital first character" required="required" size="10" maxlength="10" onchange="startform()"/>&nbsp;
+			   
+               Last Name:   <!--Limit the maxlength lastname-->
+               <input type="text" id="ln" name="Lastname" title="Capital first character" required="required" size="10" maxlength="15"/><br />
+			   
+			   
+               <br/>State:
+               <select name="State">  
+                  <optgroup label="HongKong">
+                     <option value="N">New Territories</option>
+                     <option value="H">Hong Kong Island</option>
+                     <option value="K">Kowloon</option>
+                  <optgroup label="Taiwan">
+                     <option value="P">Tai pak</option>
+                     <option value="A">Kaohsiung</option>
+                     <option value="C">Hsinchu</option>
+                  </optgroup>
+               </select>
+               <br/>
+			   
+               <br/>Address 1: 
+               <input type="text" required="required" name="Address1" maxlength="20"/>
+			   
+               Address 2:
+               <input type="text" required="required" name="Address2" maxlength="20"/><br />
+               <br/>
+			   
+			   Email Address:  <!--Limit the email pattern-->
+               <input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please email type" required="required" name="emAddress"/><br/><br />
+			   
+               <input type="checkbox" name="send" checked="checked"/>Send me email updates about panada information
+               <br /><br />
+			   
+            </fieldset>
+            <br><br>
+            <fieldset>
+               <legend>Payment Information</legend>
+               Choose a Payment Type: <br>
+               <input type="radio" id="Payment" name="Payment" value="V" required="required" />
+               VISA
+               <input type="radio" id="Payment" name="Payment" value="M" />
+               Mastercard <br /><br>
+			   
+			   
+               Choose your amount: <br>
+               <input type="radio" id="amount" name="amount" value="$10"/>
+               $10
+               <input type="radio" id="amount" name="amount" value="$50" />
+               $50
+               <input type="radio" id="amount" name="amount" value="$100" checked="checked" />
+               $100
+               <input type="radio" id="amount" name="amount" value="$500" />
+               $500 <br /><br>
+			   
+			   <!--Limit the credit card pattern and length-->
+               Credit card Number: <input name="Creditno" title="16 num" required="required" pattern="[0-9]{16}" placeholder="xxxx xxxx xxxx xxxx" type="text" min="1" maxlength="16"/> <br>
+               <br/>
+			   
+			   Expiration Date:  <!--The min cannot be before 2022-03-->
+               <input type="month" required="required" min='2022-03'/>&nbsp;&nbsp;&nbsp;
+			   
+			   <!--Limit the CVV pattern (must 3 num)-->
+               CVV Number: <input name="cvvno" required="required" type="text" pattern="[0-9][0-9][0-9]" required title="3 numbers" maxlength="3"/> <br><br>
+			   
+			   
+               Your User ID: <input type="text" id="usid" name="userid" size="15" value=" ">&nbsp;
+               Your Password: <input type="text" id="uspwd" name="userid" size="15" value=" ">
+			   
+            </fieldset>
+            <br>
+			
+            <input id="submit" type="submit" value="Submit" onclick="javascript:Submit()"/>&nbsp;
+            <input id="reset" type="reset" value="Reset" onclick="javascript:reSet()"/>
+			
+         </form>
+      </div>
+      <div id="footer">
+         <br>
+         <p>
+            Copyright (c) the PandaNET 2022. All rights reserved. Give comment to 
+            <a href="mailto:q622826@gmail.com">
+               US
+         </p>
+         <p></a></p>
+      </div>
+   </body>
+</html>
